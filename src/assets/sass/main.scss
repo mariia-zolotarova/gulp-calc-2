@@ -1,0 +1,15 @@
+    // Variables
+    @import './variables/color.scss';
+    @import './variables/fonts.scss';
+
+    // Global
+    @import './global/reset.scss';
+    @import './global/global.scss';
+
+    // Common
+
+    @import './common/buttons.scss';
+
+
+    // Pages
+    @import './pages/home.scss';

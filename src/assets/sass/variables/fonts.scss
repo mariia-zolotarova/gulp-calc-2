@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Red+Hat+Display:wght@400;500&display=swap');
+// font-family: 'Lato', sans-serif; 400/700
+// font-family: 'Red Hat Display', sans-serif; 400/500
+
+:root {
+    // Font Family
+
+    --main-font: 'Red Hat Display', sans-serif;
+    --sub-font: 'Lato', sans-serif;
+
+
+    //Text Fonts
+    --text-font: 400 19rem/32rem var(--sub-font);
+
+}
+
+//Text
+
+.text-font {
+    font: var(--text-font);
+}
