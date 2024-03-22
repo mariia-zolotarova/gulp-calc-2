@@ -219,8 +219,6 @@ function renderPieChart() {
     );
 
     series.data.setAll(storage.expenses);
-    //series.labels.template.set("visible", false);
-    //series.ticks.template.set("visible", false);
 
     const mediaQuery = window.matchMedia('(max-width: 768px)')
 
@@ -233,31 +231,30 @@ function renderPieChart() {
 function openForm() {
     document.getElementById("myForm").style.display = "block";
     document.querySelector('.wrapper').style.opacity = "0.5";
-    document.getElementById("myForm").style.opacity  = "1";
+    document.getElementById("myForm").style.opacity = "1";
     document.querySelector('.salary__inp').focus();
 }
+
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
     document.querySelector('.wrapper').style.opacity = "1";
 }
+
 let openFormBtn = document.querySelector('.open-button')
 openFormBtn.addEventListener('click', openForm)
 
-// let closeFormBtn = document.querySelector('.btn_cancel');
-// closeFormBtn.addEventListener('click', ()=>{
-//     let waistInp = document.querySelector('.waist__inp');
-//     let waistSum = parseInt(waistInp.value);
-//     waistSum.value ==="";
-//     closeForm})
-
 let closeFormBtn = document.querySelector('.btn_cancel');
-closeFormBtn.addEventListener('click', closeForm)
+closeFormBtn.addEventListener('click', () => {
+    let waistInp = document.querySelector('.salary__inp');
+    waistInp.value = "";
+    closeForm()
+})
 
 
 function withdrawForm() {
     document.getElementById("WithdrawForm").style.display = "block";
     document.querySelector('.wrapper').style.opacity = "0.5";
-    document.getElementById("WithdrawForm").style.opacity  = "1";
+    document.getElementById("WithdrawForm").style.opacity = "1";
     document.querySelector('.waist__inp').focus();
 }
 
@@ -266,11 +263,14 @@ function closeWithdrawForm() {
     document.querySelector('.wrapper').style.opacity = "1";
 }
 
-// let withdrawFormBtn = document.querySelector('.withdraw-button')
-// withdrawFormBtn.addEventListener('click', withdrawForm)
 
 let closeWithdrawFormBtn = document.querySelector('.btn_cancel_waist');
-closeWithdrawFormBtn.addEventListener('click', closeWithdrawForm)
+closeWithdrawFormBtn.addEventListener('click', () => {
+    let waistInp = document.querySelector('.waist__inp');
+    waistInp.value = "";
+    closeWithdrawForm()
+})
+
 
 
 AddSalary()
