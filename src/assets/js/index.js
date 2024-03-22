@@ -204,7 +204,11 @@ function renderPieChart() {
     ]);
 
     let chart = root.container.children.push(
-        am5percent.PieChart.new(root, {})
+        //am5percent.PieChart.new(root, {})
+        am5percent.PieChart.new(root, {
+            radius: am5.percent(90),
+            innerRadius: am5.percent(50)
+        })
     );
 
     series = chart.series.push(
@@ -215,6 +219,15 @@ function renderPieChart() {
     );
 
     series.data.setAll(storage.expenses);
+    //series.labels.template.set("visible", false);
+    //series.ticks.template.set("visible", false);
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+
+    if (mediaQuery.matches) {
+        series.labels.template.set("visible", false);
+        series.ticks.template.set("visible", false);
+    }
 }
 
 function openForm() {
@@ -257,4 +270,5 @@ renderData(categories)
 am5.ready(function () {
     renderPieChart();
 })
+
 
