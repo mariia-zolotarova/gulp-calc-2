@@ -130,6 +130,12 @@ body {
 
 }
 
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
 .actions{
     display: flex;
     flex-direction: row;

@@ -187,7 +187,7 @@ function WaistSalary() {
             alert('Please choose a category');
         }
 
-
+        closeWithdrawForm()
     });
 }
 
@@ -234,6 +234,7 @@ function openForm() {
     document.getElementById("myForm").style.display = "block";
     document.querySelector('.wrapper').style.opacity = "0.5";
     document.getElementById("myForm").style.opacity  = "1";
+    document.querySelector('.salary__inp').focus();
 }
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
@@ -241,6 +242,13 @@ function closeForm() {
 }
 let openFormBtn = document.querySelector('.open-button')
 openFormBtn.addEventListener('click', openForm)
+
+// let closeFormBtn = document.querySelector('.btn_cancel');
+// closeFormBtn.addEventListener('click', ()=>{
+//     let waistInp = document.querySelector('.waist__inp');
+//     let waistSum = parseInt(waistInp.value);
+//     waistSum.value ==="";
+//     closeForm})
 
 let closeFormBtn = document.querySelector('.btn_cancel');
 closeFormBtn.addEventListener('click', closeForm)
@@ -250,7 +258,9 @@ function withdrawForm() {
     document.getElementById("WithdrawForm").style.display = "block";
     document.querySelector('.wrapper').style.opacity = "0.5";
     document.getElementById("WithdrawForm").style.opacity  = "1";
+    document.querySelector('.waist__inp').focus();
 }
+
 function closeWithdrawForm() {
     document.getElementById("WithdrawForm").style.display = "none";
     document.querySelector('.wrapper').style.opacity = "1";
