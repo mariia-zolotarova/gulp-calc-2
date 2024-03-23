@@ -111,7 +111,6 @@ function createCard(item) {
     // withdrawBtn.classList.add('withdraw__money');
     // withdrawBtn.innerHTML = "Withdraw"
 
-
     cardOut.append(cardTitle, img, sum, cardCurrency);
 
     return cardOut;
