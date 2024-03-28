@@ -11,3 +11,4 @@ npm install
 npm run start        Запустити в режимі розробника
 npm run start:build      Запустити в режимі продакшену
 
+https://expenses-ok.netlify.app/
